@@ -14,6 +14,7 @@ async function ieladetChataZinas(){
         let teksts="";
         for(let i=0;i<dati.length;i++){
                 teksts=teksts+"<b>"+dati[i].vards+":</b> "+dati[i].zina+"<br />";
+        }
         zinas.innerHTML = teksts;
 }
  setInterval( ieladetChataZinas, 1000);
@@ -21,14 +22,15 @@ async function ieladetChataZinas(){
      
 function nosutit(){
 let vards = document.getElementById('vards').value;
-if(vards!=""){
-        if(zina.value!=""){
-        zinas.innerHTML = zinas.innerHTML+"<br /><b>"+
-                        vards+":</b> "+zina.value;
-        zina.value="";
+        if(vards!=""){
+                if(zina.value!=""){
+                zinas.innerHTML = zinas.innerHTML+"<br /><b>"+
+                                vards+":</b> "+zina.value;
+                zina.value="";
+                }else{
+                alert("Ieraksti ziņu!");
+                }
         }else{
-        alert("Ieraksti ziņu!");
+                alert("Čats nepieļauj anonīmu ziņu iesniegšanu!");
         }
-}else{
-        alert("Čats nepieļauj anonīmu ziņu iesniegšanu!");
 }
