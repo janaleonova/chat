@@ -4,9 +4,7 @@ let zina = document.querySelector('.manaZina');
 let zinas = document.querySelector('.chataZinas');
 
 
-function sutitZinu(){
-   zinas.innerHTML = zinas.innerHTML+'<br>'+zina.value;
-}
+
 
 async function ieladetChataZinas(){ 
         let datiNoServera = await fetch(API+'/lasit');
@@ -20,7 +18,7 @@ async function ieladetChataZinas(){
  setInterval( ieladetChataZinas, 1000);
 
      
-function nosutit(){
+function sutitZinu(){
 let vards = document.getElementById('vards').value;
         if(vards!=""){
                 if(zina.value!=""){
