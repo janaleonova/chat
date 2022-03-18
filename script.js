@@ -1,34 +1,23 @@
-const API="https://chatpy.janaleonova.repl.co";
+const API="https://chatpy.janaleonova.repl.co"
+
+/*const API = 'https://chat2022.armandspucs.repl.co'*/
 
 let zina = document.querySelector('.manaZina');
 let zinas = document.querySelector('.chataZinas');
 
+function sutitZinu()
+{
+    console.log('sutitZinu() darbojas');
 
-
-
-async function ieladetChataZinas(){ 
-        let datiNoServera = await fetch(API+'/lasit');
-        let dati =await datiNoServera.json();
-        let teksts="";
-        for(let i=0;i<dati.length;i++){
-                teksts=teksts+"<b>"+dati[i].vards+":</b> "+dati[i].zina+"<br />";
-        }
-        zinas.innerHTML = teksts;
+    zinas.innerHTML = zinas.innerHTML + '<br />' + zina.value;
 }
- setInterval( ieladetChataZinas, 1000);
 
-     
-function sutitZinu(){
-let vards = document.getElementById('vards').value;
-        if(vards!=""){
-                if(zina.value!=""){
-                zinas.innerHTML = zinas.innerHTML+"<br /><b>"+
-                                vards+":</b> "+zina.value;
-                zina.value="";
-                }else{
-                alert("Ieraksti ziņu!");
-                }
-        }else{
-                alert("Čats nepieļauj anonīmu ziņu iesniegšanu!");
-        }
+async function ieladetChataZinas()
+{
+    let datiNoServera = await fetch(API + '/lasit');
+    let dati = await datiNoServera.text();
+    zinas.innerHTML = dati;
 }
+
+setInterval( ieladetChataZinas, 1000 )
+
