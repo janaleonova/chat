@@ -1,0 +1,25 @@
+body{
+    background: url(img/bg.jpg);
+}
+
+.wrapper{
+    background-color: rgb(212, 211, 211);
+    width: 500px;
+    height: 500px;
+    border: grey 2px solid;
+    padding: 10px;
+    margin: auto;
+    position: absolute; /*pzicionē pa centrā pa vertikāli*/
+    top: 50%;
+    margin-top: -250px;
+    left: 50%;
+    margin-left: -250px
+    ;
+}
+.chataZinas{
+    color: red;
+    background-color: whitesmoke;
+    height: 300px;
+    padding: 5px;
+    overflow: scroll;
+}
