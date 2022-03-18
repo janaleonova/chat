@@ -1,3 +1,5 @@
+const API="https://chatpy.janaleonova.repl.co/"
+
 let zina = document.querySelector('.manaZina');
 let zinas = document.querySelector('.chataZinas');
 
